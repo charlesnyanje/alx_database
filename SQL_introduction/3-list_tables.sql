@@ -1,6 +1,5 @@
 -- Write a script that lists all the tables of a database in your MySQL server.
 #!/usr/bin/env bash
 
-mysql -hlocalhost -uroot -p --execute="SHOW TABLES;" "mysql"
-
-
+USE mysql;
+SHOW TABLES;
