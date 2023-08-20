@@ -6,7 +6,7 @@
 -- The database name will be passed as an argument of the mysql command
 
 
-SELECT cities.id, cities.name,
-FROM cities
-WHERE cities.state_id = (SELECT states.id FROM states WHERE states.name = 'California')
+SELECT cities.id, states.name
+FROM cities, states
+WHERE cities.state_id = states.id AND states.name = 'California'
 ORDER BY cities.id ASC;
